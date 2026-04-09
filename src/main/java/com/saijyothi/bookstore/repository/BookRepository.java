@@ -14,4 +14,6 @@ public interface BookRepository extends JpaRepository<Book, Long>, JpaSpecificat
     List<Book> findAllByOrderByIdAsc();
 
     long countByStockGreaterThan(Integer stock);
+
+    boolean existsByIsbn(String isbn);
 }

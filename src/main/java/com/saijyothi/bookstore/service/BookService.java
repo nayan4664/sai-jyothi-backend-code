@@ -128,16 +128,17 @@ public class BookService {
 
         @Override
         public void run(String... args) throws IOException {
-            if (bookRepository.count() > 0) {
-                restoreLegacySeedStockIfNeeded();
-                return;
-            }
-
             ClassPathResource resource = new ClassPathResource("seed/books.json");
             try (InputStream inputStream = resource.getInputStream()) {
                 List<BookSeedItem> seedItems = objectMapper.readValue(inputStream, new TypeReference<>() {});
-                List<Book> books = seedItems.stream().map(this::toEntity).toList();
-                bookRepository.saveAll(books);
+                if (bookRepository.count() == 0) {
+                    List<Book> books = seedItems.stream().map(this::toEntity).toList();
+                    bookRepository.saveAll(books);
+                    return;
+                }
+
+                restoreLegacySeedStockIfNeeded();
+                addMissingSeedBooks(seedItems);
             }
         }
 
@@ -171,6 +172,17 @@ public class BookService {
                     .toList();
 
             bookRepository.saveAll(repairedBooks);
+        }
+
+        private void addMissingSeedBooks(List<BookSeedItem> seedItems) {
+            List<Book> missingBooks = seedItems.stream()
+                    .filter(item -> !bookRepository.existsByIsbn(item.isbn()))
+                    .map(this::toEntity)
+                    .toList();
+
+            if (!missingBooks.isEmpty()) {
+                bookRepository.saveAll(missingBooks);
+            }
         }
     }
 

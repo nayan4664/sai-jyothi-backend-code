@@ -1,0 +1,17 @@
+com\saijyothi\bookstore\service\BookService$BookDataLoader$1.class
+com\saijyothi\bookstore\controller\HealthController.class
+com\saijyothi\bookstore\dto\ApiError.class
+com\saijyothi\bookstore\entity\Book.class
+com\saijyothi\bookstore\service\BookService$BookDataLoader.class
+com\saijyothi\bookstore\exception\BookNotFoundException.class
+com\saijyothi\bookstore\specification\BookSpecification.class
+com\saijyothi\bookstore\service\BookService$BookSeedItem.class
+com\saijyothi\bookstore\service\BookService.class
+com\saijyothi\bookstore\config\CorsConfig$1.class
+com\saijyothi\bookstore\config\CorsConfig.class
+com\saijyothi\bookstore\BookstoreApplication.class
+com\saijyothi\bookstore\repository\BookRepository.class
+com\saijyothi\bookstore\exception\GlobalExceptionHandler.class
+com\saijyothi\bookstore\controller\BookController.class
+com\saijyothi\bookstore\dto\BookRequest.class
+com\saijyothi\bookstore\dto\BookResponse.class

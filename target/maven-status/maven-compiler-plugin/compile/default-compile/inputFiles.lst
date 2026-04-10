@@ -10,6 +10,7 @@ C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\s
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\controller\OrderController.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\controller\ProfileController.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\controller\ReviewController.java
+C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\controller\StoreContentController.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\controller\WishlistController.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\AdminBookRequest.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\AdminBookResponse.java
@@ -21,9 +22,11 @@ C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\s
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\CartItemRequest.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\CartItemResponse.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\CartResponse.java
+C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\CatalogueResponse.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\CheckoutRequest.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\CustomerInfoResponse.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\DashboardStatsResponse.java
+C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\DistributorResponse.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\ForgotPasswordRequest.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\OrderItemResponse.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\OrderResponse.java
@@ -35,6 +38,12 @@ C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\s
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\ReviewRequest.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\ReviewResponse.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\RoleUpdateRequest.java
+C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\StoreContentResponse.java
+C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\TestimonialResponse.java
+C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\TrackingInfoResponse.java
+C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\TrackingMilestoneResponse.java
+C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\UniversitySegmentResponse.java
+C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\UpcomingHighlightResponse.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\UserResponse.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\dto\WishlistItemResponse.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\entity\AppUser.java
@@ -73,5 +82,6 @@ C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\s
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\service\OrderService.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\service\ProfileService.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\service\ReviewService.java
+C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\service\StoreContentService.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\service\WishlistService.java
 C:\Users\11\Downloads\Build E-Commerce Frontend Demo\backend\src\main\java\com\saijyothi\bookstore\specification\BookSpecification.java

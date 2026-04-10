@@ -4,6 +4,8 @@ import com.saijyothi.bookstore.dto.CheckoutRequest;
 import com.saijyothi.bookstore.dto.CustomerInfoResponse;
 import com.saijyothi.bookstore.dto.OrderItemResponse;
 import com.saijyothi.bookstore.dto.OrderResponse;
+import com.saijyothi.bookstore.dto.TrackingInfoResponse;
+import com.saijyothi.bookstore.dto.TrackingMilestoneResponse;
 import com.saijyothi.bookstore.entity.AppUser;
 import com.saijyothi.bookstore.entity.CartItem;
 import com.saijyothi.bookstore.entity.Order;
@@ -140,6 +142,54 @@ public class OrderService {
                 order.getShippingCost(),
                 order.getCreatedAt(),
                 customerInfo,
-                items);
+                items,
+                buildTracking(order));
+    }
+
+    private TrackingInfoResponse buildTracking(Order order) {
+        String currentLabel;
+        String estimatedDeliveryText;
+        String trackingAddress = "Sai Jyothi Dispatch Desk, 43HQ+PG6 Jattarodi, Indra Nagar, Nagpur, Maharashtra 440003";
+
+        switch (order.getStatus()) {
+            case DELIVERED -> {
+                currentLabel = "Delivered";
+                estimatedDeliveryText = "Delivered to the provided shipping address.";
+            }
+            case SHIPPED -> {
+                currentLabel = "Out for regional delivery";
+                estimatedDeliveryText = "Expected within 2-3 business days from the regional partner hub.";
+            }
+            case PROCESSING -> {
+                currentLabel = "Packed and being handed to dispatch";
+                estimatedDeliveryText = "Expected within 4-5 business days after dispatch confirmation.";
+            }
+            case CANCELLED -> {
+                currentLabel = "Order cancelled";
+                estimatedDeliveryText = "This order is no longer in the delivery pipeline.";
+            }
+            default -> {
+                currentLabel = "Order placed";
+                estimatedDeliveryText = "Expected within 5-7 business days after confirmation.";
+            }
+        }
+
+        boolean packed = order.getStatus() == OrderStatus.PROCESSING
+                || order.getStatus() == OrderStatus.SHIPPED
+                || order.getStatus() == OrderStatus.DELIVERED;
+        boolean shipped = order.getStatus() == OrderStatus.SHIPPED || order.getStatus() == OrderStatus.DELIVERED;
+        boolean delivered = order.getStatus() == OrderStatus.DELIVERED;
+
+        return new TrackingInfoResponse(
+                "TRK-" + order.getOrderNumber(),
+                currentLabel,
+                estimatedDeliveryText,
+                "Sai Jyothi Logistics Desk",
+                trackingAddress,
+                List.of(
+                        new TrackingMilestoneResponse("Order placed", "We received your order and payment confirmation.", true),
+                        new TrackingMilestoneResponse("Packed", "Your books are packed and waiting for dispatch.", packed),
+                        new TrackingMilestoneResponse("Shipped", "Your parcel left the dispatch hub for regional delivery.", shipped),
+                        new TrackingMilestoneResponse("Delivered", "Shipment reached the destination address.", delivered)));
     }
 }

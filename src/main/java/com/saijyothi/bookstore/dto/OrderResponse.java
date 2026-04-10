@@ -12,5 +12,6 @@ public record OrderResponse(
         BigDecimal shippingCost,
         Instant orderDate,
         CustomerInfoResponse customerInfo,
-        List<OrderItemResponse> items) {
+        List<OrderItemResponse> items,
+        TrackingInfoResponse tracking) {
 }

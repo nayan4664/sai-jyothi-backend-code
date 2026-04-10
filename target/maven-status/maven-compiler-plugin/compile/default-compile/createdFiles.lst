@@ -4,6 +4,7 @@ com\saijyothi\bookstore\dto\ApiError.class
 com\saijyothi\bookstore\entity\Book.class
 com\saijyothi\bookstore\service\BookService$BookDataLoader.class
 com\saijyothi\bookstore\exception\BookNotFoundException.class
+com\saijyothi\bookstore\service\OrderService$1.class
 com\saijyothi\bookstore\specification\BookSpecification.class
 com\saijyothi\bookstore\service\BookService$BookSeedItem.class
 com\saijyothi\bookstore\service\BookService.class
